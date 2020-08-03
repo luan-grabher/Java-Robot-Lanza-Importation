@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Lanza_Importacao {
+    private static int enterprise = 19;
 
     public static void main(String[] args) {
         String nomeApp = "Lanza Engenharia Importação ";
@@ -26,12 +27,12 @@ public class Lanza_Importacao {
             String r = "";
 
             System.out.println("Definindo controle...");
-            ControleTemplates controle = new ControleTemplates(mes, ano, 19, "Lanza Engenharia Ltda");
+            ControleTemplates controle = new ControleTemplates(mes, ano, enterprise, "Lanza Engenharia Ltda");
             controle.definirFilesAndPaths();
 
             List<Executavel> executaveis = new ArrayList<>();
-            executaveis.add(controle.new definirFileTemplatePadrao());
-            executaveis.add(controle.new importacaoBancoExtratoExcel("Banco do Brasil", mes + ".;" + ano + ";.xlsx", 7,"A","J", "B", "D", "O","-M"));
+            executaveis.add(controle.new definirFileTemplatePadrao());            
+            executaveis.add(controle.new importacaoBancoExtratoExcel("Banco do Brasil", mes + ".;" + ano + ";.xlsx", 7,"A","D", "B", "C", "F","-E"));
             
             return AppRobo.rodarExecutaveis(nomeApp, executaveis);
         } catch (Exception e) {
