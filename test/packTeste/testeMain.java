@@ -1,6 +1,6 @@
 package packTeste;
 
-import lanza_importacao.Lanza_Importacao;
+import lanza_importacao.LanzaImportacao;
 
 public class testeMain {
 
@@ -9,8 +9,7 @@ public class testeMain {
         int ano = 2020;
         String nomeApp = "Teste";
 
-        System.out.println(
-                Lanza_Importacao.principal(mes, ano, nomeApp).replaceAll("<br>", "\n")
+        System.out.println(LanzaImportacao.principal(mes, ano, nomeApp).replaceAll("<br>", "\n")
         );
     }
 }

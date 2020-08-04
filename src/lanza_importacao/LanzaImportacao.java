@@ -6,7 +6,7 @@ import TemplateContabil.Control.ControleTemplates;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Lanza_Importacao {
+public class LanzaImportacao {
     private static int enterprise = 19;
 
     public static void main(String[] args) {
